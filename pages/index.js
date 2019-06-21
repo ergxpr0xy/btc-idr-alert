@@ -38,7 +38,7 @@ class Home extends Component {
 
         if (this.state.last_buy < this.state.current_buy) {
           this.playAudio("/static/up.mp3")
-            change = 'naik'
+          change = 'naik'
         } else {
           this.playAudio("/static/down.mp3")
           change = 'turun'
