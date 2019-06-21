@@ -10,7 +10,7 @@ class Home extends Component {
       last_sell: 0,
       current_buy: 0,
       current_sell: 0,
-      change: ''
+      change: 'sama'
     }
   }
 
@@ -24,6 +24,8 @@ class Home extends Component {
       await this.setState({
         current_buy: res.data.ticker.buy,
         current_sell: res.data.ticker.sell,
+        last_buy: res.data.ticker.buy,
+        last_sell: res.data.ticker.sell,
       });
     } else {
       await this.setState({
@@ -33,8 +35,9 @@ class Home extends Component {
         current_sell: res.data.ticker.sell,
       });
       
+      let change = "sama"
+
       if (this.state.last_buy != this.state.current_buy) {
-        let change
 
         if (this.state.last_buy < this.state.current_buy) {
           this.playAudio("/static/up.mp3")
@@ -55,7 +58,7 @@ class Home extends Component {
     setTimeout(() => {
       audio.pause()
       audio.currentTime = 0
-    }, 10000)
+    }, 9800)
   }
 
   componentDidMount() {
