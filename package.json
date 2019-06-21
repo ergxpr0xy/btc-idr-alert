@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start"
   },
-  "author": "ekoprstyo",
+  "author": "ergxpr0xy",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
